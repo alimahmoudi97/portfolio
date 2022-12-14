@@ -22,22 +22,25 @@ export default function Home() {
   }
   return (
     <div>
-      <header className="flex flex-row justify-between fixed w-full backdrop-blur z-50">
-        <div className="text-xl text-cgreen flex justify-center items-center">Website</div>
-        <div className="hidden md:flex w-1/2">
-          <nav className="w-1/2 flex">
-            <ol className="hidden sm:flex sm:justify-between items-center h-20">
-              <li className="ml-2 before:content-['01.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">About</li>
-              <li className="ml-2 before:content-['02.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">Experince</li>
-              <li className="ml-2 before:content-['03.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">Work</li>
-              <li className="ml-2 before:content-['04.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">Contect</li>
-            </ol>
-            <div className="hidden sm:flex sm:justify-between h-20 items-center ml-2">
-             <button className="text-cgreen bg-transparent border border-cgreen rounded-lg cursor-pointer py-2 px-4 mr-auto ml-auto">
-                  Resume
-                </button>
-            </div>
-          </nav>
+      <header className="flex flex-row justify-center fixed w-full backdrop-blur z-50">
+        <div className="flex flex-row w-4/5 justify-between">
+          <div className="text-xl text-cgreen flex justify-center items-center">Website</div>
+          <div className="hidden md:flex w-1/2">
+            <nav className="w-1/2 flex">
+              <ol className="hidden sm:flex sm:justify-between items-center h-20">
+                <li className="ml-2 before:content-['01.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">About</li>
+                <li className="ml-2 before:content-['02.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">Experince</li>
+                <li className="ml-2 before:content-['03.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">Work</li>
+                <li className="ml-2 before:content-['04.'] before:text-cgreen text-light-text cursor-pointer hover:text-cgreen font-mono">Contect</li>
+              </ol>
+              <div className="hidden sm:flex sm:justify-between h-20 items-center ml-2">
+              <button className="text-cgreen bg-transparent border border-cgreen rounded-lg cursor-pointer py-2 px-4 mr-auto ml-auto">
+                    Resume
+                  </button>
+              </div>
+            </nav>
+          </div>
+
         </div>
         <div
           className={`${isClickedMenu?'h-screen':''} md:hidden flex flex-col right-0`}>
@@ -301,10 +304,10 @@ export default function Home() {
           <section  id="last-projects" className="flex flex-col w-1/2 self-center mt-20">
             <ProjectCardOne/>
           </section>
-          <section id="noteworthy-projects" className="flex justify-center flex-col w-1/2 mt-20 self-center">
+          <section id="noteworthy-projects" className="flex justify-center flex-col md:w-1/2 w-4/5 mt-20 self-center">
             <h2 className="text-2xl text-white self-center">Other Noteworthy Projects</h2>
             <a className="text-lg text-cgreen cursor-pointer hover:underline self-center">view the archive</a>
-            <ul className="lg:grid-cols-2 grid grid-cols-1 w-3/4 gap-3 self-center">
+            <ul className="lg:grid-cols-2 xl:w-4/5 w-4/5 grid grid-cols-1 gap-3 self-center">
               <li>
                 <ProjectCardTwo/>
               </li>
